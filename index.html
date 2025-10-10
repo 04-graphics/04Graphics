@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abdullahi — Graphic Designer</title>
+  <meta name="description" content="Portfolio of Abdullahi — logos, flyers and brand designs." />
+  <!-- Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="nav">
+      <a href="#hero" class="logo">04 | Graphics</a>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION (now full viewport) -->
+  <section id="hero" class="hero">
+    <div class="hero-container">
+      <div class="hero-left">
+        <img src="images/logo.png" alt="Abdullahi Logo" class="hero-logo" />
+      </div>
+      <div class="hero-right">
+        <h1>Hi, I'm Abdullahi 👋</h1>
+        <p class="muted">
+          A creative graphic designer with passion for clean, minimal, and timeless designs.
+        </p>
+        <a href="#projects" class="btn">View My Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
+    <div class="projects-header">
+      <h2 class="projects-title">
+        <span class="projects-title-left">My</span>
+        <span class="projects-title-accent">Works</span>
+      </h2>
+      <div class="projects-underline"></div>
+      <p class="projects-sub">Selected projects & visual experiments — logos, flyers, brand identity.</p>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card" data-image="images/Project1-thumb.jpg" data-title="Hexagon Logo" data-desc="A clean geometric logo for a tech startup. Tools: Illustrator.">
+        <img src="images/Project1-thumb.jpg" alt="Hexagon Logo thumbnail" />
+        <div class="meta">Logo Design</div>
+      </div>
+
+      <div class="project-card" data-image="images/Project2-thumb.jpg" data-title="Festival Flyer" data-desc="Bold, high-contrast flyer for a music festival. Tools: Photoshop.">
+        <img src="images/Project2-thumb.jpg" alt="Festival Flyer thumbnail" />
+        <div class="meta">Flyer Design</div>
+      </div>
+
+      <div class="project-card" data-image="images/Project3-thumb.jpg" data-title="Studio Identity" data-desc="Brand identity for a creative studio. Simple, scalable, memorable.">
+        <img src="images/Project3-thumb.jpg" alt="Studio Identity thumbnail" />
+        <div class="meta">Brand Identity</div>
+      </div>
+      <!-- add more project-cards as needed -->
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Let's Work Together</h2>
+    <p>Reach me via <a href="mailto:abdullahi@example.com">abdullahi@example.com</a></p>
+  </section>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-label="Project preview">
+    <div class="modal-content" role="document">
+      <button class="modal-close" aria-label="Close (Esc)">✕</button>
+
+      <div class="modal-body">
+        <div class="modal-media">
+          <img src="" alt="Project Preview" id="modalImage">
+        </div>
+        <div class="modal-info">
+          <h3 id="modalTitle">Project Title</h3>
+          <p id="modalDesc" class="modal-desc">Project description goes here.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
