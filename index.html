@@ -7,7 +7,7 @@
   <meta name="description" content="Portfolio of Abdullahi — logos, flyers and brand designs." />
   <!-- Montserrat -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="Style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- HEADER -->
@@ -15,13 +15,14 @@
     <nav class="nav">
       <a href="#hero" class="logo">04 | Graphics</a>
       <div class="nav-links">
+        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
   </header>
 
-  <!-- HERO SECTION (now full viewport) -->
+  <!-- HERO SECTION (now full viewport minus nav) -->
   <section id="hero" class="hero">
     <div class="hero-container">
       <div class="hero-left">
@@ -32,7 +33,55 @@
         <p class="muted">
           A creative graphic designer with passion for clean, minimal, and timeless designs.
         </p>
-        <a href="#projects" class="btn">View My Work</a>
+        <div style="display:flex;gap:.75rem;align-items:center;">
+          <a href="#experience" class="btn secondary">My Experience</a>
+          <a href="#projects" class="btn">View My Work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE / TOOLS (inserted between hero and projects) -->
+  <section id="experience" class="experience">
+    <div class="experience-inner">
+      <div class="experience-stats">
+        <h3>Experience</h3>
+        <div class="stats-row">
+          <div class="stat">
+            <div class="stat-number">4+</div>
+            <div class="stat-label">Years</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">24+</div>
+            <div class="stat-label">Projects</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">12+</div>
+            <div class="stat-label">Clients</div>
+          </div>
+  	<div class="stat">
+    	<div class="stat-number">4+</div>
+    	<div class="stat-label">Design Tools </div>
+ 	 </div>
+
+        </div>
+      </div>
+
+      <div class="experience-tools">
+        <h3>Tools</h3>
+        <div class="tools-list">
+          <span><img src="images/tools/adobeillustrator-svgrepo-com.svg" alt="Illustrator" /></span>
+          <span><img src="images/tools/adobephotoshop-svgrepo-com.svg" alt="Photoshop" /></span>
+          <span><img src="images/tools/coreldraw-svgrepo-com.svg" alt="CorelDraw" /></span>
+          <span><img src="images/tools/figma-svgrepo-com.svg" alt="Figma" /></span>
+        </div>
+      </div>
+
+      <div class="experience-focus">
+        <h3>Focus</h3>
+        <p>
+          Brand identity, logo systems, and high-impact promotional materials. I prioritize clarity, scalability, and consistent brand systems across digital and print.
+        </p>
       </div>
     </div>
   </section>
@@ -41,27 +90,31 @@
   <section id="projects" class="projects">
     <div class="projects-header">
       <h2 class="projects-title">
-        <span class="projects-title-left">My</span>
-        <span class="projects-title-accent">Works</span>
+        <span class="projects-title-accent">My Works</span>
       </h2>
-      <div class="projects-underline"></div>
       <p class="projects-sub">Selected projects & visual experiments — logos, flyers, brand identity.</p>
     </div>
 
     <div class="projects-grid">
+
+      <div class="project-card" data-image="images/Project3-thumb.jpg" data-title="Studio Identity" data-desc="Brand identity for a creative studio. Simple, scalable, memorable.">
+        <img src="images/Project3-thumb.jpg" alt="Studio Identity thumbnail" loading="lazy" />
+        <div class="meta">Brand Identity</div>
+      </div>
+
       <div class="project-card" data-image="images/Project1-thumb.jpg" data-title="Hexagon Logo" data-desc="A clean geometric logo for a tech startup. Tools: Illustrator.">
-        <img src="images/Project1-thumb.jpg" alt="Hexagon Logo thumbnail" />
+        <img src="images/Project1-thumb.jpg" alt="Hexagon Logo thumbnail" loading="lazy" />
         <div class="meta">Logo Design</div>
       </div>
 
-      <div class="project-card" data-image="images/Project2-thumb.jpg" data-title="Festival Flyer" data-desc="Bold, high-contrast flyer for a music festival. Tools: Photoshop.">
-        <img src="images/Project2-thumb.jpg" alt="Festival Flyer thumbnail" />
+      <div class="project-card" data-image="images/Project2-thumb.jpg" data-title="Festival Flyer" data-desc="Bold, high-contrast flyer for a music festival. Tools: CorelDraw.">
+        <img src="images/Project2-thumb.jpg" alt="Festival Flyer thumbnail" loading="lazy" />
         <div class="meta">Flyer Design</div>
       </div>
 
-      <div class="project-card" data-image="images/Project3-thumb.jpg" data-title="Studio Identity" data-desc="Brand identity for a creative studio. Simple, scalable, memorable.">
-        <img src="images/Project3-thumb.jpg" alt="Studio Identity thumbnail" />
-        <div class="meta">Brand Identity</div>
+      <div class="project-card" data-image="images/Project4-thumb.jpg" data-title="Others" data-desc="Different types of designs showing creativity and adaptibility. Tools: CorelDraw">
+        <img src="images/Project4-thumb.jpg" alt="Festival Flyer thumbnail" loading="lazy" />
+        <div class="meta">Promotional Design</div>
       </div>
       <!-- add more project-cards as needed -->
     </div>
@@ -73,6 +126,28 @@
     <p>Reach me via <a href="mailto:abdullahi@example.com">abdullahi@example.com</a></p>
   </section>
 
+  <!-- FOOTER (new) -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <p class="footer-copy">© <span id="year"></span> Abdullahi — Graphic Designer</p>
+      <div class="social-icons" aria-label="Social links">
+        <a href="https://instagram.com/your_handle" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="images/tools/instagram-svgrepo-com.svg" alt="Instagram" />
+        </a>
+
+        <a href="https://wa.me/2340000000000" target="_blank" rel="noopener" aria-label="WhatsApp" class="whatsapp-btn">
+          <img src="images/tools/whatsapp-svgrepo-com.svg" alt="WhatsApp" />
+        </a>
+
+        <a href="mailto:abdullahi@example.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
   <!-- MODAL -->
   <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-label="Project preview">
     <div class="modal-content" role="document">
@@ -80,7 +155,9 @@
 
       <div class="modal-body">
         <div class="modal-media">
+          <button class="modal-nav modal-prev" aria-label="Previous">‹</button>
           <img src="" alt="Project Preview" id="modalImage">
+          <button class="modal-nav modal-next" aria-label="Next">›</button>
         </div>
         <div class="modal-info">
           <h3 id="modalTitle">Project Title</h3>
