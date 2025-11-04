@@ -7,6 +7,10 @@
   <meta name="description" content="Portfolio of Abdullahi — logos, flyers and brand designs." />
   <!-- Montserrat -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- GLightbox CSS (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -34,47 +38,69 @@
           A creative graphic designer with passion for clean, minimal, and timeless designs.
         </p>
         <div style="display:flex;gap:.75rem;align-items:center;">
-          <a href="#experience" class="btn secondary">My Experience</a>
-          <a href="#projects" class="btn">View My Work</a>
+          <!-- NOTE: secondary + primary classes applied (enhanced effects) -->
+          <a href="#experience" class="btn secondary"><span>My Experience</span></a>
+          <a href="#projects" class="btn primary"><span>View My Work</span></a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- EXPERIENCE / TOOLS (inserted between hero and projects) -->
-  <section id="experience" class="experience">
-    <div class="experience-inner">
-      <div class="experience-stats">
-        <h3>Experience</h3>
-        <div class="stats-row">
-          <div class="stat">
-            <div class="stat-number">4+</div>
-            <div class="stat-label">Years</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number">24+</div>
-            <div class="stat-label">Projects</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number">12+</div>
-            <div class="stat-label">Clients</div>
-          </div>
-  	<div class="stat">
-    	<div class="stat-number">4+</div>
-    	<div class="stat-label">Design Tools </div>
- 	 </div>
+  <!-- ===== EXPERIENCE SECTION ===== -->
+<section id="experience" class="experience section">
+  <div class="container">
+    <h2 class="section-title">Experience</h2>
+    <p class="section-subtitle">
+      A blend of creativity, precision, and design execution that delivers real impact.
+    </p>
 
+    <div class="exp-grid">
+      <div class="exp-item">
+        <h3>Graphic Designer — Freelance</h3>
+        <p>Crafted impactful brand visuals, company profiles, and digital campaigns for diverse clients.</p>
+      </div>
+      <div class="exp-item">
+        <h3>Design Intern — XYZ Studio</h3>
+        <p>Collaborated with creative directors on digital projects, infographics, and user interface mockups.</p>
+      </div>
+    </div>
+
+    <div class="exp-btns">
+      <a href="#projects" class="exp-btn primary">View My Work</a>
+ 
+    </div>
+  </div>
+</section>
+
+<!-- ===== TOOLS SECTION ===== -->
+<section id="tools" class="tools section">
+  <div class="container">
+    <h2 class="section-title">Tools I Use</h2>
+    <p class="section-subtitle">
+      Great results demand the right tools — these are my creative essentials.
+    </p>
+
+    <div class="tools-gallery">
+      <img src="coreldraw-svgrepo-com.svg" alt="CorelDraw">
+      <img src="adobeillustrator-svgrepo-com.svg" alt="Adobe Illustrator">
+      <img src="figma-svgrepo-com.svg" alt="Figma">
+      <img src="adobephotoshop-svgrepo-com.svg" alt="Adobe Photoshop">
+    </div>
+  </div>
+</section>
+
+        <!-- indicator / scroll-to-works button (added) -->
+        <div class="tools-cta">
+          <button class="to-works" data-target="#projects" aria-label="View works">
+            View works ↓
+          </button>
         </div>
       </div>
 
-      <div class="experience-tools">
-        <h3>Tools</h3>
-        <div class="tools-list">
-          <span><img src="images/tools/adobeillustrator-svgrepo-com.svg" alt="Illustrator" /></span>
-          <span><img src="images/tools/adobephotoshop-svgrepo-com.svg" alt="Photoshop" /></span>
-          <span><img src="images/tools/coreldraw-svgrepo-com.svg" alt="CorelDraw" /></span>
-          <span><img src="images/tools/figma-svgrepo-com.svg" alt="Figma" /></span>
-        </div>
+      <div class="experience-tile focus-tile">
+        <h3>Focus</h3>
+        <div class="focus-line">Selected projects & experiments in brand identity, flyers, and marketing collateral.</div>
       </div>
     </div>
   </section>
@@ -85,38 +111,82 @@
       <h2 class="projects-title">
         <span class="projects-title-accent">My Works</span>
       </h2>
-      <p class="projects-sub">Selected projects & visual experiments showcasing some logos, flyers, brand identity etc. designed for clients.</p>
+      <p class="projects-sub">Selected projects & visual experiments showcasing some logos, flyers, <br /> brand identity etc. designed for clients.</p>
     </div>
 
     <div class="projects-grid">
 
-      <div class="project-card" data-image="images/Project3-thumb.jpg" data-title="Studio Identity" data-desc="Brand identity for a creative studio. Simple, scalable, memorable.">
-        <img src="images/Project3-thumb.jpg" alt="Studio Identity thumbnail" loading="lazy" />
+      <div class="project-card" data-image="images/Project3-thumb.jpg" data-title="Studio Identity" >
+        <img src="Project3-thumb.jpg" alt="Studio Identity thumbnail" loading="lazy" />
         <div class="meta">Brand Identity</div>
       </div>
 
-      <div class="project-card" data-image="images/Project1-thumb.jpg" data-title="Hexagon Logo" data-desc="A clean geometric logo for a tech startup. Tools: Illustrator.">
-        <img src="images/Project1-thumb.jpg" alt="Hexagon Logo thumbnail" loading="lazy" />
+      <div class="project-card" data-image="images/Project1-thumb.jpg" data-title="Hexagon Logo" >
+        <img src="Project1-thumb.jpg" alt="Hexagon Logo thumbnail" loading="lazy" />
         <div class="meta">Logo Design</div>
       </div>
 
-      <div class="project-card" data-image="images/Project2-thumb.jpg" data-title="Festival Flyer" data-desc="Bold, high-contrast flyer for a music festival. Tools: CorelDraw.">
-        <img src="images/Project2-thumb.jpg" alt="Festival Flyer thumbnail" loading="lazy" />
+      <div class="project-card" data-image="images/Project2-thumb.jpg" data-title="Festival Flyer" >
+        <img src="Project2-thumb.jpg" alt="Festival Flyer thumbnail" loading="lazy" />
         <div class="meta">Flyer Design</div>
       </div>
 
-      <div class="project-card" data-image="images/Project4-thumb.jpg" data-title="Others" data-desc="Different types of designs showing creativity and adaptibility. Tools: CorelDraw">
-        <img src="images/Project4-thumb.jpg" alt="Festival Flyer thumbnail" loading="lazy" />
+      <div class="project-card" data-image="images/Project4-thumb.jpg" data-title="Others">
+        <img src="Project4-thumb.jpg" alt="Festival Flyer thumbnail" loading="lazy" />
         <div class="meta">Promotional Design</div>
       </div>
       <!-- add more project-cards as needed -->
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- CTA SECTION (REPLACES previous contact mail text) -->
+  <section class="cta-section" aria-labelledby="cta-heading">
+  
+<div class="cta-container">
+  <!-- Right: Content -->
+  <div class="cta-right">
+    <span class="cta-badge">✨ LET'S COLLABORATE</span>
+    <h2 id="cta-heading" class="cta-heading">
+      Ready to Bring Your <span class="highlight">Vision to Life?</span>
+    </h2>
+    <p class="cta-text">
+      I create designs that don't just look good—they tell your story and connect with your audience. Let's turn your ideas into stunning visuals that stand out.
+    </p>
+
+    <div class="cta-actions">
+      <a href="mailto:004.Graphics@gmail.com" class="cta-btn-primary">
+        <span>Start a Project</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+
+      <div class="cta-social">
+        <span class="cta-social-label">or connect:</span>
+        <a href="https://wa.me/2347082944647" target="_blank" rel="noopener" class="cta-social-btn whatsapp" aria-label="WhatsApp">
+          <img src="https://api.iconify.design/logos/whatsapp-icon.svg" alt="WhatsApp">
+        </a>
+        <a href="https://instagram.com/04_graphics" target="_blank" rel="noopener" class="cta-social-btn instagram" aria-label="Instagram">
+          <img src="https://api.iconify.design/skill-icons/instagram.svg" alt="Instagram">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Left: Logo -->
+  <div class="cta-left">
+    <img src="images/logo.png" alt="04 Graphics Logo" class="cta-logo">
+  </div>
+</div>
+  </section>
+
+  <!-- CONTACT (kept but simplified - CTA replaced the mail paragraph) -->
   <section id="contact" class="contact">
-    <h2>Let's Work Together</h2>
-    <p>Reach me via <a href="mailto:abdullahi@example.com">abdullahi@example.com</a></p>
+    <!-- Kept intentionally empty: CTA now holds contact actions -->
+    <div style="max-width:1100px;margin:0 auto;padding:2rem 5%;text-align:center;color:var(--muted-text);">
+      <h2>Let's Work Together</h2>
+      <p class="muted">Use the “Start a Project” button above or connect via WhatsApp / Instagram.</p>
+    </div>
   </section>
 
   <!-- FOOTER (new) -->
@@ -124,24 +194,22 @@
     <div class="footer-inner">
       <p class="footer-copy">© <span id="year"></span> Abdullahi — Graphic Designer</p>
       <div class="social-icons" aria-label="Social links">
-        <a href="https://instagram.com/your_handle" target="_blank" rel="noopener" aria-label="Instagram">
-          <img src="images/tools/instagram-svgrepo-com.svg" alt="Instagram" />
+        <a href="https://instagram.com/04_graphics" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="icons8-instagram.svg" alt="Instagram" />
         </a>
 
-        <a href="https://wa.me/2340000000000" target="_blank" rel="noopener" aria-label="WhatsApp" class="whatsapp-btn">
-          <img src="images/tools/whatsapp-svgrepo-com.svg" alt="WhatsApp" />
+        <a href="https://wa.me/2347082944647" target="_blank" rel="noopener" aria-label="WhatsApp" class="whatsapp-btn">
+          <img src="icons8-whatsapp.svg" alt="WhatsApp" />
         </a>
 
-        <a href="mailto:abdullahi@example.com" aria-label="Email">
-          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
-            <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
-          </svg>
+       <a href="mailto:004.Graphics@gmail.com" target="_blank" rel="noopener" aria-label="gmail" class="gmail-btn">
+          <img src="icons8-gmail.svg" alt="Gmail" />
         </a>
       </div>
     </div>
   </footer>
 
-  <!-- MODAL -->
+  <!-- Keep original modal (left intact as a fallback) -->
   <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-label="Project preview">
     <div class="modal-content" role="document">
       <button class="modal-close" aria-label="Close (Esc)">✕</button>
@@ -152,10 +220,13 @@
           <img src="" alt="Project Preview" id="modalImage">
           <button class="modal-nav modal-next" aria-label="Next">›</button>
         </div>
-        
+
       </div>
     </div>
   </div>
+
+  <!-- GLightbox JS (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
   <script src="script.js"></script>
 </body>
